@@ -13,9 +13,9 @@ libraryDependencies += "org.scalatest" % "scalatest_2.9.0" % "1.6.1" % "test"
 libraryDependencies ++= {
   val geotoolsVersion = "2.7.2"
   Seq(
-   	"org.geotools" %% "gt-main" % geotoolsVersion % "compile->default",
-    	"org.geotools" %% "gt-shapefile" % geotoolsVersion % "compile->default",
-    	"net.liftweb" %% "gt-epsg-hsql" % geotoolsVersion % "compile->default"
+   	"org.geotools" % "gt-main" % geotoolsVersion % "compile->default",
+    	"org.geotools" % "gt-shapefile" % geotoolsVersion % "compile->default",
+    	"org.geotools" % "gt-epsg-hsql" % geotoolsVersion % "compile->default"
     )
 }
 
