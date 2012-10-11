@@ -1,17 +1,28 @@
 name := "GeoUtils"
 
-version := "1.0"
+version := "1.0-SNAPSHOT"
 
-scalaVersion := "2.9.1"
+scalaVersion := "2.9.2"
 
-resolvers += "Open Source Geospatial Foundation Repository" at "http://download.osgeo.org/webdav/geotools/"
+resolvers ++= {
+  Seq(
+    "OSGeo Repository" at "http://download.osgeo.org/webdav/geotools/",
+    "OpenGeo Repository" at "http://repo.opengeo.org/"
+  )	  
+}
 
-libraryDependencies += "junit" % "junit" % "4.8" % "test"
-
-libraryDependencies += "org.scalatest" % "scalatest_2.9.0" % "1.6.1" % "test"
 
 libraryDependencies ++= {
-  val geotoolsVersion = "8.0-M3"
+  Seq(
+    "junit" % "junit" % "4.8" % "test",
+    "org.scalatest" %% "scalatest" % "1.8" % "test",
+    "org.specs2" %% "specs2" % "1.12.2" % "test"    
+  )		   
+}
+
+
+libraryDependencies ++= {
+  val geotoolsVersion = "9-SNAPSHOT"
   Seq(
    	"org.geotools" % "gt-main" % geotoolsVersion % "compile->default",
     	"org.geotools" % "gt-shapefile" % geotoolsVersion % "compile->default",
